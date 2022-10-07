@@ -1,5 +1,5 @@
-import parseTimetable from "./src/utils/parseTimeTable"
+import findFreeSlots from "./src/utils/findFreeSlots"
 
 const s = ``
 
-console.log(parseTimetable(s))
+console.log(findFreeSlots([s]))

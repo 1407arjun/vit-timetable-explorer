@@ -1,5 +1,6 @@
 type Course = {
     slot: string
+    pos: { r: number; c: number }
     code: string
     type: string
     room: string
