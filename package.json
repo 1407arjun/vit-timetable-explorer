@@ -1,0 +1,28 @@
+{
+  "name": "vit-timetable-explorer",
+  "version": "0.0.0",
+  "description": "Exploring everything available from VTOP Timetables",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublish": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1407arjun/vit-timetable-explorer.git"
+  },
+  "keywords": [
+    "vit",
+    "timetable",
+    "vtop"
+  ],
+  "author": "Arjun Sivaraman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1407arjun/vit-timetable-explorer/issues"
+  },
+  "homepage": "https://github.com/1407arjun/vit-timetable-explorer#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
