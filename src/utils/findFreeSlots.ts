@@ -1,10 +1,11 @@
+import type Slots from "../types/slots"
 import parseTimetable from "./parseTimeTable"
 import sortAndFind from "./sortAndFind"
 
 const findFreeSlots = (timetables: string[]) => {
     const slots: string[][][] = [[], [], [], [], [], [], []]
     const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
-    const freeSlots = []
+    const freeSlots: Slots = {}
 
     for (const t of timetables) {
         const courses = parseTimetable(t)
@@ -14,12 +15,12 @@ const findFreeSlots = (timetables: string[]) => {
         }
     }
 
-    // for (const s of slots) {
+    for (var i = 0; i < slots.length; i++) {
+        const freeSlotsDay = sortAndFind(slots[i])
+        freeSlots[days[i]] = freeSlotsDay
+    }
 
-    // }
-    console.log(sortAndFind(slots[0]))
-
-    //return freeSlots
+    return freeSlots
 }
 
 export default findFreeSlots

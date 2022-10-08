@@ -1,3 +1,3 @@
-type Slots = { [key: string]: { start: string; end: string } }
+type Slots = { [key: string]: string[] }
 
 export default Slots
