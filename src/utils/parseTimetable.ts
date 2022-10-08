@@ -1,17 +1,6 @@
 import type Course from "../types/course"
 
-const parseTimetable = (
-    str: string,
-    allTimings?: boolean
-): {
-    courses: Course[]
-    timings?: {
-        theoryStart: string[]
-        theoryEnd: string[]
-        labStart: string[]
-        labEnd: string[]
-    }
-} => {
+const parseTimetable = (str: string): Course[] => {
     const data = []
     const courses: Course[] = []
 
@@ -33,7 +22,6 @@ const parseTimetable = (
                 const [start, end] = [theoryStart![j], theoryEnd![j - 1]]
                 courses.push({
                     slot,
-                    pos: { r: Math.floor(i / 2), c: j - 2 },
                     code,
                     type,
                     room,
@@ -52,7 +40,6 @@ const parseTimetable = (
                 courses.push({
                     slot,
                     code,
-                    pos: { r: Math.floor((i + 1) / 2), c: j - 1 },
                     type,
                     room,
                     start,
@@ -62,10 +49,7 @@ const parseTimetable = (
         }
     }
 
-    //@ts-ignore
-    return allTimings
-        ? { courses, timings: { theoryStart, theoryEnd, labStart, labEnd } }
-        : { courses }
+    return courses
 }
 
 export default parseTimetable
