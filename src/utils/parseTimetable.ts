@@ -25,6 +25,7 @@ const parseTimetable = (str: string): Course[] => {
                     code,
                     type,
                     room,
+                    day: Math.floor(i / 2),
                     start,
                     end
                 })
@@ -42,6 +43,7 @@ const parseTimetable = (str: string): Course[] => {
                     code,
                     type,
                     room,
+                    day: Math.floor((i + 1) / 2),
                     start,
                     end
                 })

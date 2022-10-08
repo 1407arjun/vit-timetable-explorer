@@ -3,6 +3,7 @@ type Course = {
     code: string
     type: string
     room: string
+    day: number
     start: string
     end: string
 }
