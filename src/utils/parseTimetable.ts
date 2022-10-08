@@ -32,12 +32,12 @@ const parseTimetable = (str: string): Course[] => {
             }
         }
 
-        for (var j = 1; j < data[i + 1].length; j++) {
+        for (var j = 2; j < data[i + 1].length; j++) {
             const lec = data[i + 1][j].split("-")
 
             if (data[i + 1][j] !== "-" && lec.length > 1) {
                 const [slot, code, type, room] = lec
-                const [start, end] = [labStart![j], labEnd![j - 1]]
+                const [start, end] = [labStart![j + 1], labEnd![j]]
                 courses.push({
                     slot,
                     code,
