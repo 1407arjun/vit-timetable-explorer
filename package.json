@@ -3,6 +3,9 @@
     "version": "2.2.0",
     "description": "Exploring everything available from VTOP Timetables",
     "main": "dist/index.js",
+    "bin": {
+        "vit-tt": "dist/bin/cli.js"
+    },
     "scripts": {
         "prepublish": "npx tsc",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,6 +26,7 @@
     },
     "homepage": "https://github.com/1407arjun/vit-timetable-explorer#readme",
     "devDependencies": {
+        "@types/node": "^18.8.3",
         "typescript": "^4.8.4"
     }
 }
