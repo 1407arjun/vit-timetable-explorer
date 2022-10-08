@@ -8,7 +8,7 @@ const findFreeSlots = (timetables: string[]) => {
     const freeSlots: Slots = {}
 
     for (const t of timetables) {
-        const courses = parseTimetable(t)
+        const courses = parseTimetable(t.trim())
         for (const c of courses) {
             if (c.start !== "Lunch" && c.end !== "Lunchh")
                 slots[c.day].push([c.start, c.end])
