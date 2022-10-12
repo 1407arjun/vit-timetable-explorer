@@ -1,4 +1,7 @@
 declare type Slots = {
-    [key: string]: string[];
+    [key: string]: {
+        start: string;
+        end: string;
+    }[];
 };
 export default Slots;

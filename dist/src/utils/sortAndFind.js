@@ -14,7 +14,7 @@ const sortAndFind = (timings) => {
         const [start, end] = t;
         if ((0, compareTime_1.compareTime)(current, start) < 0) {
             if ((0, timeDiff_1.default)(start, current, 30))
-                freeSlots.push(`${current} to ${start}`);
+                freeSlots.push({ start: current, end: start });
             current = end;
         }
         else {
