@@ -1,6 +1,6 @@
 {
     "name": "vit-timetable-explorer",
-    "version": "2.5.0",
+    "version": "2.6.0",
     "description": "Exploring everything available from VTOP Timetables",
     "main": "dist/index.js",
     "bin": {
