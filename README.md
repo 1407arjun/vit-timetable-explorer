@@ -40,7 +40,7 @@ type {
 
 ### Find free slots using the CLI
 ``` bash
-vit-tt <path-to-txt-file>
+$ vit-tt <path-to-txt-file>
 
 # Returns start and end times in an array, type { start: string; end: string }[]
 ```
